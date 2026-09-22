@@ -1,5 +1,6 @@
-# 🛡️ ClaimGraph AI — Hybrid Knowledge Graph & Multimodal Fraud Intelligence Platform
+# 🛡️ ClaimGraph AI — Graph-Based Fraud Intelligence Platform
 
+An AI-powered fraud intelligence platform combining machine learning, graph analytics, multimodal evidence and an investigator copilot.
 
 ---
 
@@ -31,7 +32,7 @@ ClaimGraph AI is an end-to-end insurance fraud detection platform designed to id
 
 ```bash
 # 1. Clone & install dependencies
-git clone https://github.com/your-username/ClaimGraph-AI.git
+git clone https://github.com/Brajkishore-yadav/ClaimGraph-AI.git
 cd ClaimGraph-AI
 python -m venv venv
 source venv/bin/activate
@@ -97,3 +98,5 @@ ClaimGraph-AI/
 
 ---
 
+## 📚 Technical Preparation Guide
+For detailed technical Q&A defense on graph algorithms, PR-AUC vs ROC-AUC, and class imbalance handling, refer to [`docs/INTERVIEW_PREP.md`](docs/INTERVIEW_PREP.md).

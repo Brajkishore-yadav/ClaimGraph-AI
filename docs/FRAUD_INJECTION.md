@@ -1,7 +1,7 @@
 # ClaimGraph AI — Synthetic Fraud Injection Specification
 
 ## Overview
-This document outlines the exact methodology used to generate synthetic claims and inject realistic fraud ring topology for Assurant 2027 Data Science internship demonstration.
+This document outlines the exact methodology used to generate synthetic claims and inject realistic fraud ring topology for the **ClaimGraph AI** fraud intelligence engineering platform.
 
 ## Fraud Ring Typologies
 1. **Shared Device Ring**: Multiple distinct customer accounts filing claims from the exact same IMEI/Device ID within a 14-day window.

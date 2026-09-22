@@ -1,9 +1,12 @@
-# ClaimGraph AI — Assurant Data Science Interview Cheat Sheet
+# ClaimGraph AI — Technical Interview Preparation & Defense Guide
 
-## Frequently Asked Questions
+## Overview
+This document provides concise technical explanations and interview Q&A defense for the design choices, metrics, and algorithms used in **ClaimGraph AI**.
+
+## Frequently Asked Questions & Technical Defenses
 
 ### Q1: Why did you use NetworkX instead of Neo4j GDS or PyTorch Geometric for production feature extraction?
-**Answer:** "NetworkX allowed me to implement graph algorithms like Louvain community detection and PageRank directly in Python without dependency overhead or external licensing. It allowed me to deeply explain how the node degree and cluster density metrics are computed during technical interviews."
+**Answer:** "NetworkX allowed me to implement graph algorithms like Louvain community detection and PageRank directly in Python without heavy dependency overhead or external licensing. It allowed me to deeply explain how node degree and cluster density metrics are computed during technical interviews."
 
 ### Q2: Why use PR-AUC as the headline metric instead of ROC-AUC?
 **Answer:** "Severe class imbalance (1.3% fraud rate) renders ROC-AUC overly optimistic because it includes easy True Negatives in the false positive rate denominator. PR-AUC focuses exclusively on Precision and Recall for the positive fraud class."

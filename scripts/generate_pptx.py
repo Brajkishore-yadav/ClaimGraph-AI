@@ -1,7 +1,7 @@
 """
 ClaimGraph AI — PowerPoint Presentation Deck Generator
 ======================================================
-Creates a professional 8-slide presentation deck using python-pptx
+Creates a professional presentation deck using python-pptx
 populated with actual empirical results from the 3-experiment ablation study.
 """
 
@@ -49,13 +49,13 @@ def create_presentation():
     p.alignment = PP_ALIGN.CENTER
     
     p2 = tf.add_paragraph()
-    p2.text = "Hybrid Knowledge Graph & Multimodal Fraud Intelligence Engineering"
+    p2.text = "Graph-Based Fraud Intelligence Platform"
     p2.font.size = Pt(24)
     p2.font.color.rgb = WHITE
     p2.alignment = PP_ALIGN.CENTER
     
     p3 = tf.add_paragraph()
-    p3.text = "\nAssurant 2027 Data Science & Analytics Internship Portfolio Project"
+    p3.text = "\nAn AI-powered fraud intelligence platform combining machine learning, graph analytics, multimodal evidence and an investigator copilot."
     p3.font.size = Pt(18)
     p3.font.color.rgb = ACCENT_GREEN
     p3.alignment = PP_ALIGN.CENTER
@@ -91,7 +91,7 @@ def create_presentation():
     tf3.word_wrap = True
     
     p = tf3.paragraphs[0]
-    p.text = "2. System Architecture & Interview-Explainable Tech Stack"
+    p.text = "2. System Architecture & Independent Tech Stack"
     p.font.size = Pt(32)
     p.font.bold = True
     p.font.color.rgb = GOLD

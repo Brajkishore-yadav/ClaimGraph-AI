@@ -9,13 +9,24 @@ ClaimGraph AI — Streamlit Investigation & Analytics Dashboard
 5. 💬 Investigation Copilot Chatbot (LangGraph)
 """
 
+import sys
+import os
+import json
+from pathlib import Path
+
+# Add project root to sys.path in a clean, portable way so "from src..." works in local & deployed Streamlit Cloud
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 import pandas as pd
 import numpy as np
-import json
 import plotly.express as px
 import plotly.graph_objects as go
-from pathlib import Path
+
+# Import agent copilot cleanly after sys.path setup
+from src.agent.graph import ClaimInvestigationAgent
 
 # Page Config
 st.set_page_config(
@@ -38,8 +49,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Path setup
-ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data" / "processed"
 
 @st.cache_data
@@ -65,7 +74,7 @@ scored_df, rings_df, ablation_df, val_report = load_data()
 # Sidebar Navigation
 st.sidebar.image("https://img.icons8.com/isometric/100/shield.png", width=70)
 st.sidebar.title("ClaimGraph AI")
-st.sidebar.caption("Assurant 2027 DS & Analytics Project")
+st.sidebar.caption("Graph-Based Fraud Intelligence Platform")
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio(
@@ -81,15 +90,17 @@ page = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 st.sidebar.info("""
-**Candidate:** College Student  
-**Target:** Assurant 2027 DS & Analytics  
+**Project:** ClaimGraph AI  
+**Type:** Personal Portfolio Project  
+**Category:** Graph-Based Fraud Intelligence Platform  
 **Key Tech:** NetworkX, XGBoost, SHAP, LangGraph, FastAPI, Streamlit
 """)
 
 # Page 1: Executive Overview & Ablation Table
 if page == "📊 Executive Overview & Ablation":
-    st.title("🛡️ ClaimGraph AI — Executive Overview")
-    st.markdown("### Hybrid Knowledge Graph & Multimodal Fraud Intelligence Platform")
+    st.title("🛡️ ClaimGraph AI")
+    st.subheader("Graph-Based Fraud Intelligence Platform")
+    st.markdown("An AI-powered fraud intelligence platform combining machine learning, graph analytics, multimodal evidence and an investigator copilot.")
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -146,7 +157,7 @@ elif page == "🎯 Claim Risk Profiler":
         st.error("🚨 DEMO CLAIM AUDIT — HIGH FRAUD PROBABILITY DETECTED")
         c1, c2, c3 = st.columns(3)
         c1.metric("Risk Score", "0.999", "Tier: HIGH")
-        c2.metric("Recommendation", "ESCALATE FOR SIU", "Action: Review")
+        c2.metric("Recommendation", "ESCALATE FOR INVESTIGATION", "Action: Review")
         c3.metric("ML Fraud Prob", "99.9%", "Model: XGBoost")
 
         st.markdown("#### 🔍 SHAP Feature Contributions (Local Interpretability)")
@@ -174,7 +185,6 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
         st.dataframe(ring_members, use_container_width=True)
 
         st.subheader("Graph Topology Visualization")
-        # Visual representation of cluster
         nodes = ring_members["claim_id"].tolist() + ["DEV-SHARED-01", "SHP-SUSPECT-42"]
         edges_df = pd.DataFrame({
             "source": ring_members["claim_id"].tolist(),
@@ -207,7 +217,6 @@ elif page == "💬 Investigation Copilot":
     st.title("💬 ClaimGraph AI Copilot")
     st.caption("LangGraph State Machine Agent for Fraud Investigators")
 
-    from src.agent.graph import ClaimInvestigationAgent
     copilot = ClaimInvestigationAgent()
 
     if "messages" not in st.session_state:

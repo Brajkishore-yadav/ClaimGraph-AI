@@ -10,11 +10,18 @@ REST API providing endpoints for:
 - System Health & Monitoring Metrics
 """
 
+import sys
 import os
 import json
 import logging
 import pandas as pd
 from pathlib import Path
+
+# Add project root to sys.path in a clean, portable way
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from typing import Dict, Any, List, Optional
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -29,7 +36,7 @@ logger = logging.getLogger("claimgraph_api")
 
 app = FastAPI(
     title="ClaimGraph AI API",
-    description="Portfolio-grade Fraud Intelligence Platform for Assurant 2027 Data Science & Analytics",
+    description="Graph-Based Fraud Intelligence Platform",
     version="1.0.0"
 )
 
@@ -42,8 +49,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# File Paths
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = ROOT_DIR / "data" / "processed"
 MODEL_DIR = ROOT_DIR / "models"
 
@@ -77,6 +82,7 @@ def read_root():
     return {
         "status": "online",
         "system": "ClaimGraph AI",
+        "subtitle": "Graph-Based Fraud Intelligence Platform",
         "version": "1.0.0",
         "docs_url": "/docs"
     }
