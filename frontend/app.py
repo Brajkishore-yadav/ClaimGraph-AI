@@ -183,7 +183,7 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
         ring_ids = sorted(rings_df["detected_ring_id"].unique())
         selected_ring = st.selectbox("Select Detected Ring ID:", options=ring_ids, index=0)
 
-        # 1. RING SUMMARY (Ring-level metrics shown ONCE at top)
+        # 1. RING SUMMARY (Community-level metrics shown ONCE at top)
         ring_rows = rings_df[rings_df["detected_ring_id"] == selected_ring]
         first_row = ring_rows.iloc[0]
 
@@ -233,7 +233,7 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
                     G.add_edge(erow["source"], erow["target"], type=erow.get("edge_type", "CONNECTED"))
 
                 if G.number_of_nodes() > 0:
-                    pos = nx.spring_layout(G, k=0.4, seed=42)
+                    pos = nx.spring_layout(G, k=0.45, seed=42)
 
                     def categorize_node(n):
                         if n.startswith("CLM"): return "Claim", "#FF4B4B", 14
@@ -244,23 +244,52 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
                         elif n.startswith("PAY"): return "Payment Account", "#D4AF37", 12
                         return "Entity", "#A0A0A0", 10
 
-                    # Line Trace for Edges
-                    edge_x, edge_y = [], []
-                    for u, v in G.edges():
-                        x0, y0 = pos[u]
-                        x1, y1 = pos[v]
-                        edge_x.extend([x0, x1, None])
-                        edge_y.extend([y0, y1, None])
-
-                    edge_trace = go.Scatter(
-                        x=edge_x, y=edge_y,
-                        line=dict(width=1, color="rgba(255, 255, 255, 0.25)"),
-                        hoverinfo="none",
-                        mode="lines"
-                    )
+                    EDGE_COLORS = {
+                        "FILED_BY": "#00E5FF",       # Cyan
+                        "USES_DEVICE": "#FF9100",    # Orange
+                        "REPAIRED_BY": "#E040FB",   # Bright Purple
+                        "LOCATED_AT": "#00E676",    # Bright Green
+                        "PAID_WITH": "#FFD600",     # Bright Yellow
+                        "CONNECTED": "#FFFFFF"
+                    }
 
                     fig = go.Figure()
-                    fig.add_trace(edge_trace)
+
+                    # Render Edges grouped by relationship type for visible line colors & legend
+                    edge_types = set(nx.get_edge_attributes(G, "type").values())
+                    for etype in edge_types:
+                        ex, ey, emx, emy, ehover = [], [], [], [], []
+                        color = EDGE_COLORS.get(etype, "rgba(255, 255, 255, 0.7)")
+
+                        for u, v, data in G.edges(data=True):
+                            if data.get("type") == etype:
+                                x0, y0 = pos[u]
+                                x1, y1 = pos[v]
+                                ex.extend([x0, x1, None])
+                                ey.extend([y0, y1, None])
+                                emx.append((x0 + x1) / 2)
+                                emy.append((y0 + y1) / 2)
+                                ehover.append(f"Relationship: <b>{u}</b> ➔ <b>[{etype}]</b> ➔ <b>{v}</b>")
+
+                        # Visible Edge line trace
+                        fig.add_trace(go.Scatter(
+                            x=ex, y=ey,
+                            mode="lines",
+                            name=f"Edge: {etype}",
+                            line=dict(width=2.5, color=color),
+                            hoverinfo="none",
+                            showlegend=True
+                        ))
+
+                        # Edge midpoint hover trace
+                        fig.add_trace(go.Scatter(
+                            x=emx, y=emy,
+                            mode="markers",
+                            marker=dict(size=7, color=color, opacity=0.85),
+                            hoverinfo="text",
+                            hovertext=ehover,
+                            showlegend=False
+                        ))
 
                     # Group nodes by type for distinct colors & legend
                     node_groups = {}
@@ -277,7 +306,7 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
                             x=data["x"],
                             y=data["y"],
                             mode="markers+text",
-                            name=ntype,
+                            name=f"Node: {ntype}",
                             text=data["nodes"],
                             textposition="top center",
                             hoverinfo="text",
@@ -285,7 +314,7 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
                             marker=dict(
                                 size=data["size"],
                                 color=data["color"],
-                                line=dict(width=1, color="#FFFFFF")
+                                line=dict(width=1.5, color="#FFFFFF")
                             )
                         ))
 
@@ -296,7 +325,8 @@ elif page == "🕸️ Fraud Ring Graph Explorer":
                         margin=dict(b=20, l=5, r=5, t=40),
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                        template="plotly_dark"
+                        template="plotly_dark",
+                        height=600
                     )
 
                     st.plotly_chart(fig, use_container_width=True)
