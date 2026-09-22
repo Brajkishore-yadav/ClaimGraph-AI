@@ -24,6 +24,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+import networkx as nx
 
 # Import agent copilot cleanly after sys.path setup
 from src.agent.graph import ClaimInvestigationAgent
@@ -176,22 +177,137 @@ elif page == "🎯 Claim Risk Profiler":
 # Page 3: Fraud Ring Graph Explorer
 elif page == "🕸️ Fraud Ring Graph Explorer":
     st.title("🕸️ Knowledge Graph & Fraud Ring Explorer")
-    st.caption("NetworkX Louvain Community Detection & Shared Entity Topology")
+    st.caption("Heterogeneous Entity Graph Analysis with NetworkX & Louvain Community Detection")
 
     if not rings_df.empty:
-        st.subheader(f"Detected Suspect Ring Clusters ({rings_df['detected_ring_id'].nunique()} Total)")
-        selected_ring = st.selectbox("Select Detected Ring ID:", rings_df["detected_ring_id"].unique())
-        ring_members = rings_df[rings_df["detected_ring_id"] == selected_ring]
-        st.dataframe(ring_members, use_container_width=True)
+        ring_ids = sorted(rings_df["detected_ring_id"].unique())
+        selected_ring = st.selectbox("Select Detected Ring ID:", options=ring_ids, index=0)
 
-        st.subheader("Graph Topology Visualization")
-        nodes = ring_members["claim_id"].tolist() + ["DEV-SHARED-01", "SHP-SUSPECT-42"]
-        edges_df = pd.DataFrame({
-            "source": ring_members["claim_id"].tolist(),
-            "target": ["SHP-SUSPECT-42"] * len(ring_members)
-        })
-        fig = px.scatter(x=[1, 2, 3, 2], y=[1, 3, 1, 2], text=nodes, title=f"Cluster Topology for {selected_ring}")
-        st.plotly_chart(fig, use_container_width=True)
+        # 1. RING SUMMARY (Ring-level metrics shown ONCE at top)
+        ring_rows = rings_df[rings_df["detected_ring_id"] == selected_ring]
+        first_row = ring_rows.iloc[0]
+
+        st.markdown("### 📊 Ring Summary")
+        c1, c2, c3, c4, c5 = st.columns(5)
+        c1.metric("Detected Ring ID", selected_ring)
+        c2.metric("Community ID", str(first_row.get("community_id", "N/A")))
+        c3.metric("Community Size", str(first_row.get("community_size", "N/A")))
+        c4.metric("Claims in Ring", str(first_row.get("n_claim_members", len(ring_rows))))
+        c5.metric("Community Density", f"{first_row.get('community_density', 0.0):.4f}")
+
+        st.markdown("---")
+
+        # 2. CLAIM MEMBERS TABLE (Claim-specific details without repeated ring metrics)
+        st.markdown("### 📋 Claim Members in Selected Ring")
+        ring_claim_ids = ring_rows["claim_id"].tolist()
+
+        if not scored_df.empty and "claim_id" in scored_df.columns:
+            display_cols = [c for c in [
+                "claim_id", "customer_id", "risk_level", "risk_score", "recommendation",
+                "ml_probability", "anomaly_score", "n_shared_devices", "n_shared_shops", "n_shared_addresses"
+            ] if c in scored_df.columns]
+            member_details = scored_df[scored_df["claim_id"].isin(ring_claim_ids)][display_cols]
+        else:
+            member_details = ring_rows[["claim_id"]]
+
+        st.dataframe(member_details, use_container_width=True)
+
+        st.markdown("---")
+
+        # 3. DYNAMIC GRAPH TOPOLOGY VISUALIZATION (NetworkX + Plotly)
+        st.markdown("### 🕸️ Graph Topology & Shared Entity Relationships")
+
+        edges_path = DATA_DIR / "graph" / "graph_edges.csv"
+        if edges_path.exists():
+            edges_df = pd.read_csv(edges_path)
+
+            max_claims = st.slider("Max Claims to Render in Topology Graph:", min_value=3, max_value=40, value=min(15, len(ring_claim_ids)))
+            target_claims = ring_claim_ids[:max_claims]
+
+            # Filter graph edges connected to target claims
+            sub_edges = edges_df[(edges_df["source"].isin(target_claims)) | (edges_df["target"].isin(target_claims))]
+
+            if not sub_edges.empty:
+                G = nx.Graph()
+                for _, erow in sub_edges.iterrows():
+                    G.add_edge(erow["source"], erow["target"], type=erow.get("edge_type", "CONNECTED"))
+
+                if G.number_of_nodes() > 0:
+                    pos = nx.spring_layout(G, k=0.4, seed=42)
+
+                    def categorize_node(n):
+                        if n.startswith("CLM"): return "Claim", "#FF4B4B", 14
+                        elif n.startswith("CUS"): return "Customer", "#1F77B4", 12
+                        elif n.startswith("DEV"): return "Device", "#FF7F0E", 12
+                        elif n.startswith("REP") or n.startswith("SHP"): return "Repair Shop", "#9467BD", 16
+                        elif n.startswith("ADR") or n.startswith("ADDR"): return "Address", "#2CA02C", 10
+                        elif n.startswith("PAY"): return "Payment Account", "#D4AF37", 12
+                        return "Entity", "#A0A0A0", 10
+
+                    # Line Trace for Edges
+                    edge_x, edge_y = [], []
+                    for u, v in G.edges():
+                        x0, y0 = pos[u]
+                        x1, y1 = pos[v]
+                        edge_x.extend([x0, x1, None])
+                        edge_y.extend([y0, y1, None])
+
+                    edge_trace = go.Scatter(
+                        x=edge_x, y=edge_y,
+                        line=dict(width=1, color="rgba(255, 255, 255, 0.25)"),
+                        hoverinfo="none",
+                        mode="lines"
+                    )
+
+                    fig = go.Figure()
+                    fig.add_trace(edge_trace)
+
+                    # Group nodes by type for distinct colors & legend
+                    node_groups = {}
+                    for node in G.nodes():
+                        ntype, color, size = categorize_node(node)
+                        if ntype not in node_groups:
+                            node_groups[ntype] = {"nodes": [], "x": [], "y": [], "color": color, "size": size}
+                        node_groups[ntype]["nodes"].append(node)
+                        node_groups[ntype]["x"].append(pos[node][0])
+                        node_groups[ntype]["y"].append(pos[node][1])
+
+                    for ntype, data in node_groups.items():
+                        fig.add_trace(go.Scatter(
+                            x=data["x"],
+                            y=data["y"],
+                            mode="markers+text",
+                            name=ntype,
+                            text=data["nodes"],
+                            textposition="top center",
+                            hoverinfo="text",
+                            hovertext=[f"Node: {n}<br>Type: {ntype}<br>Degree: {G.degree(n)}" for n in data["nodes"]],
+                            marker=dict(
+                                size=data["size"],
+                                color=data["color"],
+                                line=dict(width=1, color="#FFFFFF")
+                            )
+                        ))
+
+                    fig.update_layout(
+                        title=f"Network Topology Subgraph for {selected_ring} ({G.number_of_nodes()} Nodes, {G.number_of_edges()} Edges)",
+                        showlegend=True,
+                        hovermode="closest",
+                        margin=dict(b=20, l=5, r=5, t=40),
+                        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                        template="plotly_dark"
+                    )
+
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.info("No nodes in subgraph.")
+            else:
+                st.info("No connections found for selected claims.")
+        else:
+            st.info("Graph edge data not available.")
+    else:
+        st.info("No fraud rings loaded.")
 
 # Page 4: Multimodal Damage Auditor
 elif page == "🖼️ Multimodal Damage Auditor":
