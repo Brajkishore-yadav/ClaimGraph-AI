@@ -1,6 +1,5 @@
 # 🛡️ ClaimGraph AI — Hybrid Knowledge Graph & Multimodal Fraud Intelligence Platform
 
-**Portfolio-Grade Project for Assurant 2027 Data Science, AI & Advanced Analytics Internship**
 
 ---
 
