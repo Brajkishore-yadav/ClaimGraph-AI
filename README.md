@@ -97,5 +97,3 @@ ClaimGraph-AI/
 
 ---
 
-## 📚 Technical Interview Justification Guide
-For detailed interview Q&A defense on graph algorithms, PR-AUC vs ROC-AUC, and class imbalance handling, refer to [`docs/INTERVIEW_PREP.md`](docs/INTERVIEW_PREP.md).
