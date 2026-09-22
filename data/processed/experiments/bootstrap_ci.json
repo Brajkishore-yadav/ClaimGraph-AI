@@ -1,0 +1,10 @@
+{
+  "metric": "PR-AUC",
+  "mean": 0.8669,
+  "ci_lower": 0.6979,
+  "ci_upper": 0.9879,
+  "ci_level": 0.95,
+  "n_bootstrap": 1000,
+  "model": "xgboost",
+  "experiment": "exp3_plus_multimodal"
+}

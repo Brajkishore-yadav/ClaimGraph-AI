@@ -1,0 +1,501 @@
+consistency_score,reasoning,confidence,claim_id,is_actual_mismatch,accuracy
+0.9035,Description type 'screen_damage' matches image damage type,0.8,CLM-007058,False,0.986
+0.737,Description type 'battery_issue' matches image damage type,0.8,CLM-005725,False,0.986
+0.8791,Description type 'accidental_damage' matches image damage type,0.8,CLM-002888,False,0.986
+0.7899,Description type 'battery_issue' matches image damage type,0.8,CLM-003847,False,0.986
+0.1551,MISMATCH: Description says 'screen_damage' but image shows 'mechanical_failure',0.75,CLM-001173,True,0.986
+0.2337,MISMATCH: Description says 'battery_issue' but image shows 'accidental_damage',0.75,CLM-001935,True,0.986
+0.8543,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005147,False,0.986
+0.8657,Description type 'water_damage' matches image damage type,0.8,CLM-003768,False,0.986
+0.9405,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006025,False,0.986
+0.4625,Partial match: 'screen_damage' somewhat related to 'accidental_damage',0.6,CLM-006812,True,0.986
+0.9065,Description type 'battery_issue' matches image damage type,0.8,CLM-006691,False,0.986
+0.8467,Description type 'water_damage' matches image damage type,0.8,CLM-002111,False,0.986
+0.2371,MISMATCH: Description says 'accidental_damage' but image shows 'battery_issue',0.75,CLM-006330,True,0.986
+0.2281,MISMATCH: Description says 'battery_issue' but image shows 'mechanical_failure',0.75,CLM-002416,True,0.986
+0.9479,Description type 'accidental_damage' matches image damage type,0.8,CLM-002828,False,0.986
+0.21,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-004815,True,0.986
+0.7951,Description type 'accidental_damage' matches image damage type,0.8,CLM-007035,False,0.986
+0.8468,Description type 'software_issue' matches image damage type,0.8,CLM-003434,False,0.986
+0.2242,MISMATCH: Description says 'water_damage' but image shows 'battery_issue',0.75,CLM-006787,True,0.986
+0.7466,Description type 'screen_damage' matches image damage type,0.8,CLM-005689,False,0.986
+0.8026,Description type 'theft' matches image damage type,0.8,CLM-000246,False,0.986
+0.2356,MISMATCH: Description says 'software_issue' but image shows 'theft',0.75,CLM-005785,True,0.986
+0.4599,Partial match: 'mechanical_failure' somewhat related to 'battery_issue',0.6,CLM-004377,True,0.986
+0.7358,Description type 'screen_damage' matches image damage type,0.8,CLM-004636,False,0.986
+0.251,MISMATCH: Description says 'screen_damage' but image shows 'mechanical_failure',0.75,CLM-006735,True,0.986
+0.9204,Description type 'screen_damage' matches image damage type,0.8,CLM-004861,False,0.986
+0.7292,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003129,False,0.986
+0.2257,MISMATCH: Description says 'battery_issue' but image shows 'screen_damage',0.75,CLM-004333,True,0.986
+0.8198,Description type 'battery_issue' matches image damage type,0.8,CLM-001883,False,0.986
+0.9337,Description type 'accidental_damage' matches image damage type,0.8,CLM-006553,False,0.986
+0.8953,Description type 'screen_damage' matches image damage type,0.8,CLM-006992,False,0.986
+0.1934,MISMATCH: Description says 'water_damage' but image shows 'battery_issue',0.75,CLM-001380,True,0.986
+0.8056,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005639,False,0.986
+0.7182,Description type 'software_issue' matches image damage type,0.8,CLM-001979,False,0.986
+0.9293,Description type 'theft' matches image damage type,0.8,CLM-001919,False,0.986
+0.8645,Description type 'theft' matches image damage type,0.8,CLM-001840,False,0.986
+0.3159,MISMATCH: Description says 'water_damage' but image shows 'screen_damage',0.75,CLM-006663,True,0.986
+0.7269,Description type 'theft' matches image damage type,0.8,CLM-001555,False,0.986
+0.8899,Description type 'water_damage' matches image damage type,0.8,CLM-000218,False,0.986
+0.938,Description type 'software_issue' matches image damage type,0.8,CLM-001872,False,0.986
+0.8697,Description type 'software_issue' matches image damage type,0.8,CLM-001544,False,0.986
+0.9083,Description type 'software_issue' matches image damage type,0.8,CLM-006832,False,0.986
+0.3093,MISMATCH: Description says 'battery_issue' but image shows 'water_damage',0.75,CLM-005661,True,0.986
+0.7694,Description type 'mechanical_failure' matches image damage type,0.8,CLM-007065,False,0.986
+0.9343,Description type 'screen_damage' matches image damage type,0.8,CLM-004559,False,0.986
+0.9214,Description type 'water_damage' matches image damage type,0.8,CLM-003320,False,0.986
+0.8476,Description type 'software_issue' matches image damage type,0.8,CLM-005170,False,0.986
+0.8842,Description type 'accidental_damage' matches image damage type,0.8,CLM-005748,False,0.986
+0.314,MISMATCH: Description says 'screen_damage' but image shows 'battery_issue',0.75,CLM-002836,True,0.986
+0.3382,MISMATCH: Description says 'screen_damage' but image shows 'theft',0.75,CLM-005976,True,0.986
+0.728,Description type 'battery_issue' matches image damage type,0.8,CLM-006048,False,0.986
+0.8596,Description type 'battery_issue' matches image damage type,0.8,CLM-002211,False,0.986
+0.7168,Description type 'accidental_damage' matches image damage type,0.8,CLM-004801,False,0.986
+0.7904,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001025,False,0.986
+0.9293,Description type 'software_issue' matches image damage type,0.8,CLM-001047,False,0.986
+0.9396,Description type 'screen_damage' matches image damage type,0.8,CLM-006587,False,0.986
+0.3267,MISMATCH: Description says 'battery_issue' but image shows 'theft',0.75,CLM-005231,True,0.986
+0.21,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-001559,True,0.986
+0.9496,Description type 'water_damage' matches image damage type,0.8,CLM-000178,False,0.986
+0.2016,MISMATCH: Description says 'screen_damage' but image shows 'mechanical_failure',0.75,CLM-002901,True,0.986
+0.224,MISMATCH: Description says 'battery_issue' but image shows 'accidental_damage',0.75,CLM-001670,True,0.986
+0.7908,Description type 'accidental_damage' matches image damage type,0.8,CLM-007051,False,0.986
+0.7421,Description type 'software_issue' matches image damage type,0.8,CLM-005747,False,0.986
+0.8569,Description type 'battery_issue' matches image damage type,0.8,CLM-001003,False,0.986
+0.7595,Description type 'software_issue' matches image damage type,0.8,CLM-007029,False,0.986
+0.7208,Description type 'software_issue' matches image damage type,0.8,CLM-000958,False,0.986
+0.7318,Description type 'water_damage' matches image damage type,0.8,CLM-005819,False,0.986
+0.7878,Description type 'screen_damage' matches image damage type,0.8,CLM-002448,False,0.986
+0.128,MISMATCH: Description says 'software_issue' but image shows 'theft',0.75,CLM-000643,True,0.986
+0.9376,Description type 'theft' matches image damage type,0.8,CLM-005721,False,0.986
+0.8368,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004122,False,0.986
+0.8876,Description type 'battery_issue' matches image damage type,0.8,CLM-003998,False,0.986
+0.848,Description type 'battery_issue' matches image damage type,0.8,CLM-001513,False,0.986
+0.9497,Description type 'water_damage' matches image damage type,0.8,CLM-004665,False,0.986
+0.1893,MISMATCH: Description says 'screen_damage' but image shows 'software_issue',0.75,CLM-001196,True,0.986
+0.7674,Description type 'theft' matches image damage type,0.8,CLM-003033,False,0.986
+0.7419,Description type 'battery_issue' matches image damage type,0.8,CLM-000539,False,0.986
+0.862,Description type 'screen_damage' matches image damage type,0.8,CLM-006047,False,0.986
+0.9159,Description type 'water_damage' matches image damage type,0.8,CLM-002623,False,0.986
+0.3349,MISMATCH: Description says 'mechanical_failure' but image shows 'water_damage',0.75,CLM-000309,True,0.986
+0.1721,MISMATCH: Description says 'software_issue' but image shows 'battery_issue',0.75,CLM-005891,True,0.986
+0.9204,Description type 'accidental_damage' matches image damage type,0.8,CLM-005699,False,0.986
+0.7449,Description type 'theft' matches image damage type,0.8,CLM-006056,False,0.986
+0.7212,Description type 'accidental_damage' matches image damage type,0.8,CLM-001618,False,0.986
+0.7536,Description type 'software_issue' matches image damage type,0.8,CLM-003194,False,0.986
+0.8314,Description type 'water_damage' matches image damage type,0.8,CLM-002510,False,0.986
+0.2403,MISMATCH: Description says 'water_damage' but image shows 'theft',0.75,CLM-003947,True,0.986
+0.8028,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001145,False,0.986
+0.8246,Description type 'accidental_damage' matches image damage type,0.8,CLM-000430,False,0.986
+0.8748,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006575,False,0.986
+0.837,Description type 'software_issue' matches image damage type,0.8,CLM-003940,False,0.986
+0.7058,Description type 'water_damage' matches image damage type,0.8,CLM-002070,False,0.986
+0.9338,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001216,False,0.986
+0.7875,Description type 'theft' matches image damage type,0.8,CLM-000504,False,0.986
+0.713,Description type 'accidental_damage' matches image damage type,0.8,CLM-003528,False,0.986
+0.1296,MISMATCH: Description says 'theft' but image shows 'mechanical_failure',0.75,CLM-000102,True,0.986
+0.8379,Description type 'theft' matches image damage type,0.8,CLM-003380,False,0.986
+0.2288,MISMATCH: Description says 'accidental_damage' but image shows 'software_issue',0.75,CLM-002355,True,0.986
+0.7349,Description type 'accidental_damage' matches image damage type,0.8,CLM-000133,False,0.986
+0.8722,Description type 'software_issue' matches image damage type,0.8,CLM-003485,False,0.986
+0.573,Partial match: 'accidental_damage' somewhat related to 'screen_damage',0.6,CLM-005794,True,0.986
+0.7083,Description type 'accidental_damage' matches image damage type,0.8,CLM-005100,False,0.986
+0.3384,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-002329,True,0.986
+0.7029,Description type 'water_damage' matches image damage type,0.8,CLM-006683,False,0.986
+0.1845,MISMATCH: Description says 'mechanical_failure' but image shows 'theft',0.75,CLM-003693,True,0.986
+0.9336,Description type 'screen_damage' matches image damage type,0.8,CLM-004222,False,0.986
+0.292,MISMATCH: Description says 'battery_issue' but image shows 'accidental_damage',0.75,CLM-003560,True,0.986
+0.7237,Description type 'water_damage' matches image damage type,0.8,CLM-000535,False,0.986
+0.8974,Description type 'screen_damage' matches image damage type,0.8,CLM-001567,False,0.986
+0.3208,Partial match: 'mechanical_failure' somewhat related to 'battery_issue',0.6,CLM-005441,True,0.986
+0.8367,Description type 'battery_issue' matches image damage type,0.8,CLM-006231,False,0.986
+0.3374,MISMATCH: Description says 'battery_issue' but image shows 'screen_damage',0.75,CLM-003154,True,0.986
+0.9437,Description type 'screen_damage' matches image damage type,0.8,CLM-002346,False,0.986
+0.1045,MISMATCH: Description says 'mechanical_failure' but image shows 'water_damage',0.75,CLM-004591,True,0.986
+0.8797,Description type 'screen_damage' matches image damage type,0.8,CLM-002288,False,0.986
+0.7893,Description type 'software_issue' matches image damage type,0.8,CLM-005239,False,0.986
+0.762,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006670,False,0.986
+0.946,Description type 'software_issue' matches image damage type,0.8,CLM-000536,False,0.986
+0.9432,Description type 'software_issue' matches image damage type,0.8,CLM-002116,False,0.986
+0.3033,MISMATCH: Description says 'screen_damage' but image shows 'water_damage',0.75,CLM-001609,True,0.986
+0.8381,Description type 'software_issue' matches image damage type,0.8,CLM-003108,False,0.986
+0.9483,Description type 'theft' matches image damage type,0.8,CLM-005776,False,0.986
+0.2518,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-005845,True,0.986
+0.826,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005080,False,0.986
+0.7853,Description type 'software_issue' matches image damage type,0.8,CLM-000971,False,0.986
+0.7403,Description type 'battery_issue' matches image damage type,0.8,CLM-003993,False,0.986
+0.9232,Description type 'theft' matches image damage type,0.8,CLM-001447,False,0.986
+0.7879,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001868,False,0.986
+0.7521,Description type 'water_damage' matches image damage type,0.8,CLM-005295,False,0.986
+0.3063,MISMATCH: Description says 'water_damage' but image shows 'mechanical_failure',0.75,CLM-002619,True,0.986
+0.758,Description type 'battery_issue' matches image damage type,0.8,CLM-001407,False,0.986
+0.7167,Description type 'water_damage' matches image damage type,0.8,CLM-006168,False,0.986
+0.7957,Description type 'screen_damage' matches image damage type,0.8,CLM-001892,False,0.986
+0.8691,Description type 'software_issue' matches image damage type,0.8,CLM-000458,False,0.986
+0.7326,Description type 'water_damage' matches image damage type,0.8,CLM-003481,False,0.986
+0.8688,Description type 'theft' matches image damage type,0.8,CLM-003239,False,0.986
+0.7255,Description type 'battery_issue' matches image damage type,0.8,CLM-000038,False,0.986
+0.1911,MISMATCH: Description says 'screen_damage' but image shows 'mechanical_failure',0.75,CLM-002943,True,0.986
+0.3376,MISMATCH: Description says 'software_issue' but image shows 'battery_issue',0.75,CLM-001010,True,0.986
+0.7055,Description type 'accidental_damage' matches image damage type,0.8,CLM-006856,False,0.986
+0.9187,Description type 'theft' matches image damage type,0.8,CLM-001545,False,0.986
+0.7675,Description type 'battery_issue' matches image damage type,0.8,CLM-004529,False,0.986
+0.8506,Description type 'accidental_damage' matches image damage type,0.8,CLM-004476,False,0.986
+0.9404,Description type 'mechanical_failure' matches image damage type,0.8,CLM-007016,False,0.986
+0.8757,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004999,False,0.986
+0.2794,MISMATCH: Description says 'mechanical_failure' but image shows 'screen_damage',0.75,CLM-001873,True,0.986
+0.8513,Description type 'water_damage' matches image damage type,0.8,CLM-006765,False,0.986
+0.8658,Description type 'water_damage' matches image damage type,0.8,CLM-005267,False,0.986
+0.7385,Description type 'screen_damage' matches image damage type,0.8,CLM-003616,False,0.986
+0.2611,MISMATCH: Description says 'water_damage' but image shows 'battery_issue',0.75,CLM-003640,True,0.986
+0.8327,Description type 'accidental_damage' matches image damage type,0.8,CLM-003683,False,0.986
+0.8433,Description type 'accidental_damage' matches image damage type,0.8,CLM-005011,False,0.986
+0.9206,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004691,False,0.986
+0.7271,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004018,False,0.986
+0.7912,Description type 'water_damage' matches image damage type,0.8,CLM-001043,False,0.986
+0.307,MISMATCH: Description says 'mechanical_failure' but image shows 'screen_damage',0.75,CLM-002524,True,0.986
+0.8609,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001088,False,0.986
+0.8194,Description type 'water_damage' matches image damage type,0.8,CLM-006396,False,0.986
+0.9235,Description type 'theft' matches image damage type,0.8,CLM-006351,False,0.986
+0.7967,Description type 'battery_issue' matches image damage type,0.8,CLM-001741,False,0.986
+0.7944,Description type 'theft' matches image damage type,0.8,CLM-002209,False,0.986
+0.7016,Description type 'screen_damage' matches image damage type,0.8,CLM-002534,False,0.986
+0.3104,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-000933,True,0.986
+0.7734,Description type 'battery_issue' matches image damage type,0.8,CLM-003575,False,0.986
+0.9447,Description type 'screen_damage' matches image damage type,0.8,CLM-005012,False,0.986
+0.8422,Description type 'water_damage' matches image damage type,0.8,CLM-001336,False,0.986
+0.9324,Description type 'accidental_damage' matches image damage type,0.8,CLM-003930,False,0.986
+0.7014,Description type 'screen_damage' matches image damage type,0.8,CLM-002629,False,0.986
+0.9454,Description type 'theft' matches image damage type,0.8,CLM-002615,False,0.986
+0.2329,MISMATCH: Description says 'screen_damage' but image shows 'battery_issue',0.75,CLM-006109,True,0.986
+0.8463,Description type 'water_damage' matches image damage type,0.8,CLM-003845,False,0.986
+0.7281,Description type 'software_issue' matches image damage type,0.8,CLM-000234,False,0.986
+0.2441,MISMATCH: Description says 'mechanical_failure' but image shows 'software_issue',0.75,CLM-004344,True,0.986
+0.7732,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000051,False,0.986
+0.769,Description type 'software_issue' matches image damage type,0.8,CLM-006847,False,0.986
+0.7404,Description type 'screen_damage' matches image damage type,0.8,CLM-005303,False,0.986
+0.7571,Description type 'water_damage' matches image damage type,0.8,CLM-001316,False,0.986
+0.7516,Description type 'theft' matches image damage type,0.8,CLM-004329,False,0.986
+0.8634,Description type 'battery_issue' matches image damage type,0.8,CLM-003432,False,0.986
+0.7727,Description type 'software_issue' matches image damage type,0.8,CLM-006631,False,0.986
+0.3345,MISMATCH: Description says 'water_damage' but image shows 'battery_issue',0.75,CLM-001091,True,0.986
+0.8347,Description type 'theft' matches image damage type,0.8,CLM-001373,False,0.986
+0.74,Description type 'water_damage' matches image damage type,0.8,CLM-002446,False,0.986
+0.7511,Description type 'theft' matches image damage type,0.8,CLM-004899,False,0.986
+0.8608,Description type 'battery_issue' matches image damage type,0.8,CLM-001836,False,0.986
+0.899,Description type 'screen_damage' matches image damage type,0.8,CLM-003574,False,0.986
+0.749,Description type 'accidental_damage' matches image damage type,0.8,CLM-004042,False,0.986
+0.7215,Description type 'theft' matches image damage type,0.8,CLM-005957,False,0.986
+0.1091,MISMATCH: Description says 'theft' but image shows 'accidental_damage',0.75,CLM-006169,True,0.986
+0.7488,Description type 'screen_damage' matches image damage type,0.8,CLM-006684,False,0.986
+0.7241,Description type 'water_damage' matches image damage type,0.8,CLM-004980,False,0.986
+0.7424,Description type 'software_issue' matches image damage type,0.8,CLM-003762,False,0.986
+0.7985,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005962,False,0.986
+0.7216,Description type 'software_issue' matches image damage type,0.8,CLM-001176,False,0.986
+0.8165,Description type 'accidental_damage' matches image damage type,0.8,CLM-000020,False,0.986
+0.7802,Description type 'software_issue' matches image damage type,0.8,CLM-003025,False,0.986
+0.8947,Description type 'theft' matches image damage type,0.8,CLM-003130,False,0.986
+0.8962,Description type 'accidental_damage' matches image damage type,0.8,CLM-005910,False,0.986
+0.7468,Description type 'accidental_damage' matches image damage type,0.8,CLM-005045,False,0.986
+0.8809,Description type 'screen_damage' matches image damage type,0.8,CLM-005521,False,0.986
+0.8702,Description type 'screen_damage' matches image damage type,0.8,CLM-000409,False,0.986
+0.9186,Description type 'software_issue' matches image damage type,0.8,CLM-003444,False,0.986
+0.9277,Description type 'accidental_damage' matches image damage type,0.8,CLM-006535,False,0.986
+0.8699,Description type 'battery_issue' matches image damage type,0.8,CLM-004952,False,0.986
+0.323,MISMATCH: Description says 'theft' but image shows 'mechanical_failure',0.75,CLM-000066,True,0.986
+0.9174,Description type 'battery_issue' matches image damage type,0.8,CLM-001154,False,0.986
+0.7714,Description type 'software_issue' matches image damage type,0.8,CLM-002689,False,0.986
+0.8621,Description type 'battery_issue' matches image damage type,0.8,CLM-003945,False,0.986
+0.8807,Description type 'battery_issue' matches image damage type,0.8,CLM-000436,False,0.986
+0.1466,MISMATCH: Description says 'accidental_damage' but image shows 'theft',0.75,CLM-002986,True,0.986
+0.7941,Description type 'water_damage' matches image damage type,0.8,CLM-006481,False,0.986
+0.7699,Description type 'battery_issue' matches image damage type,0.8,CLM-005097,False,0.986
+0.8402,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003319,False,0.986
+0.738,Description type 'accidental_damage' matches image damage type,0.8,CLM-005772,False,0.986
+0.8924,Description type 'water_damage' matches image damage type,0.8,CLM-000240,False,0.986
+0.8498,Description type 'software_issue' matches image damage type,0.8,CLM-004435,False,0.986
+0.7238,Description type 'screen_damage' matches image damage type,0.8,CLM-001353,False,0.986
+0.7223,Description type 'screen_damage' matches image damage type,0.8,CLM-005722,False,0.986
+0.3328,MISMATCH: Description says 'water_damage' but image shows 'screen_damage',0.75,CLM-001413,True,0.986
+0.9112,Description type 'accidental_damage' matches image damage type,0.8,CLM-002334,False,0.986
+0.7388,Description type 'water_damage' matches image damage type,0.8,CLM-005274,False,0.986
+0.7442,Description type 'theft' matches image damage type,0.8,CLM-005988,False,0.986
+0.2329,MISMATCH: Description says 'accidental_damage' but image shows 'water_damage',0.75,CLM-006917,True,0.986
+0.715,Description type 'software_issue' matches image damage type,0.8,CLM-006609,False,0.986
+0.8982,Description type 'battery_issue' matches image damage type,0.8,CLM-004922,False,0.986
+0.2736,MISMATCH: Description says 'battery_issue' but image shows 'accidental_damage',0.75,CLM-005113,True,0.986
+0.7259,Description type 'software_issue' matches image damage type,0.8,CLM-006594,False,0.986
+0.8229,Description type 'software_issue' matches image damage type,0.8,CLM-002756,False,0.986
+0.8233,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001502,False,0.986
+0.1894,MISMATCH: Description says 'battery_issue' but image shows 'software_issue',0.75,CLM-000829,True,0.986
+0.7292,Description type 'accidental_damage' matches image damage type,0.8,CLM-005936,False,0.986
+0.8392,Description type 'theft' matches image damage type,0.8,CLM-006104,False,0.986
+0.8936,Description type 'theft' matches image damage type,0.8,CLM-007022,False,0.986
+0.8682,Description type 'water_damage' matches image damage type,0.8,CLM-006919,False,0.986
+0.9444,Description type 'accidental_damage' matches image damage type,0.8,CLM-005799,False,0.986
+0.9393,Description type 'accidental_damage' matches image damage type,0.8,CLM-005857,False,0.986
+0.9288,Description type 'water_damage' matches image damage type,0.8,CLM-003933,False,0.986
+0.8309,Description type 'screen_damage' matches image damage type,0.8,CLM-003543,False,0.986
+0.7506,Description type 'accidental_damage' matches image damage type,0.8,CLM-001427,False,0.986
+0.7465,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003488,False,0.986
+0.8816,Description type 'software_issue' matches image damage type,0.8,CLM-001194,False,0.986
+0.7918,Description type 'theft' matches image damage type,0.8,CLM-000080,False,0.986
+0.9145,Description type 'screen_damage' matches image damage type,0.8,CLM-004527,False,0.986
+0.7999,Description type 'battery_issue' matches image damage type,0.8,CLM-004388,False,0.986
+0.7055,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003275,False,0.986
+0.1102,MISMATCH: Description says 'battery_issue' but image shows 'software_issue',0.75,CLM-002883,True,0.986
+0.7194,Description type 'screen_damage' matches image damage type,0.8,CLM-000231,False,0.986
+0.1624,MISMATCH: Description says 'theft' but image shows 'software_issue',0.75,CLM-005010,True,0.986
+0.872,Description type 'theft' matches image damage type,0.8,CLM-002514,False,0.986
+0.7473,Description type 'screen_damage' matches image damage type,0.8,CLM-000186,False,0.986
+0.4892,Partial match: 'mechanical_failure' somewhat related to 'battery_issue',0.6,CLM-003719,True,0.986
+0.2507,MISMATCH: Description says 'mechanical_failure' but image shows 'software_issue',0.75,CLM-006985,True,0.986
+0.8659,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003972,False,0.986
+0.8904,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005242,False,0.986
+0.7244,Description type 'screen_damage' matches image damage type,0.8,CLM-003222,False,0.986
+0.9315,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000264,False,0.986
+0.926,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003519,False,0.986
+0.7303,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000734,False,0.986
+0.8499,Description type 'screen_damage' matches image damage type,0.8,CLM-006773,False,0.986
+0.2323,MISMATCH: Description says 'accidental_damage' but image shows 'software_issue',0.75,CLM-006831,True,0.986
+0.7542,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006183,False,0.986
+0.8329,Description type 'screen_damage' matches image damage type,0.8,CLM-000469,False,0.986
+0.7738,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003232,False,0.986
+0.7863,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004651,False,0.986
+0.8361,Description type 'water_damage' matches image damage type,0.8,CLM-004839,False,0.986
+0.7038,Description type 'battery_issue' matches image damage type,0.8,CLM-004378,False,0.986
+0.9491,Description type 'water_damage' matches image damage type,0.8,CLM-002307,False,0.986
+0.845,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002628,False,0.986
+0.7993,Description type 'screen_damage' matches image damage type,0.8,CLM-001282,False,0.986
+0.1437,MISMATCH: Description says 'mechanical_failure' but image shows 'theft',0.75,CLM-002200,True,0.986
+0.1332,MISMATCH: Description says 'mechanical_failure' but image shows 'software_issue',0.75,CLM-000092,True,0.986
+0.8754,Description type 'screen_damage' matches image damage type,0.8,CLM-003923,False,0.986
+0.8916,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001374,False,0.986
+0.857,Description type 'water_damage' matches image damage type,0.8,CLM-003734,False,0.986
+0.3419,MISMATCH: Description says 'screen_damage' but image shows 'water_damage',0.75,CLM-004480,True,0.986
+0.8252,Description type 'battery_issue' matches image damage type,0.8,CLM-001657,False,0.986
+0.7322,Description type 'screen_damage' matches image damage type,0.8,CLM-004661,False,0.986
+0.3233,MISMATCH: Description says 'screen_damage' but image shows 'water_damage',0.75,CLM-001421,True,0.986
+0.9235,Description type 'accidental_damage' matches image damage type,0.8,CLM-006602,False,0.986
+0.8217,Description type 'theft' matches image damage type,0.8,CLM-006775,False,0.986
+0.7977,Description type 'software_issue' matches image damage type,0.8,CLM-000382,False,0.986
+0.9472,Description type 'screen_damage' matches image damage type,0.8,CLM-004387,False,0.986
+0.8722,Description type 'accidental_damage' matches image damage type,0.8,CLM-005229,False,0.986
+0.7273,Description type 'screen_damage' matches image damage type,0.8,CLM-001546,False,0.986
+0.8652,Description type 'water_damage' matches image damage type,0.8,CLM-000107,False,0.986
+0.8838,Description type 'accidental_damage' matches image damage type,0.8,CLM-006756,False,0.986
+0.8302,Description type 'screen_damage' matches image damage type,0.8,CLM-005534,False,0.986
+0.7151,Description type 'software_issue' matches image damage type,0.8,CLM-006704,False,0.986
+0.3453,MISMATCH: Description says 'water_damage' but image shows 'software_issue',0.75,CLM-006443,True,0.986
+0.2816,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-006556,True,0.986
+0.833,Description type 'theft' matches image damage type,0.8,CLM-000787,False,0.986
+0.9294,Description type 'theft' matches image damage type,0.8,CLM-001783,False,0.986
+0.2335,MISMATCH: Description says 'mechanical_failure' but image shows 'water_damage',0.75,CLM-003690,True,0.986
+0.7998,Description type 'screen_damage' matches image damage type,0.8,CLM-002549,False,0.986
+0.9336,Description type 'battery_issue' matches image damage type,0.8,CLM-006961,False,0.986
+0.733,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000501,False,0.986
+0.7661,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000497,False,0.986
+0.7193,Description type 'water_damage' matches image damage type,0.8,CLM-000843,False,0.986
+0.3371,MISMATCH: Description says 'theft' but image shows 'software_issue',0.75,CLM-000322,True,0.986
+0.9395,Description type 'water_damage' matches image damage type,0.8,CLM-001288,False,0.986
+0.103,MISMATCH: Description says 'accidental_damage' but image shows 'water_damage',0.75,CLM-004232,True,0.986
+0.7697,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004374,False,0.986
+0.8567,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001042,False,0.986
+0.7871,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004535,False,0.986
+0.8209,Description type 'theft' matches image damage type,0.8,CLM-003626,False,0.986
+0.2809,MISMATCH: Description says 'accidental_damage' but image shows 'water_damage',0.75,CLM-006255,True,0.986
+0.2411,MISMATCH: Description says 'water_damage' but image shows 'mechanical_failure',0.75,CLM-005134,True,0.986
+0.8842,Description type 'accidental_damage' matches image damage type,0.8,CLM-003169,False,0.986
+0.9375,Description type 'software_issue' matches image damage type,0.8,CLM-003474,False,0.986
+0.9042,Description type 'water_damage' matches image damage type,0.8,CLM-000333,False,0.986
+0.2291,MISMATCH: Description says 'accidental_damage' but image shows 'theft',0.75,CLM-000545,True,0.986
+0.8887,Description type 'theft' matches image damage type,0.8,CLM-005657,False,0.986
+0.9288,Description type 'software_issue' matches image damage type,0.8,CLM-001927,False,0.986
+0.8329,Description type 'theft' matches image damage type,0.8,CLM-006358,False,0.986
+0.9349,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006582,False,0.986
+0.8267,Description type 'software_issue' matches image damage type,0.8,CLM-000577,False,0.986
+0.147,MISMATCH: Description says 'theft' but image shows 'battery_issue',0.75,CLM-003542,True,0.986
+0.7845,Description type 'accidental_damage' matches image damage type,0.8,CLM-005431,False,0.986
+0.77,Description type 'screen_damage' matches image damage type,0.8,CLM-006949,False,0.986
+0.2865,MISMATCH: Description says 'accidental_damage' but image shows 'water_damage',0.75,CLM-005599,True,0.986
+0.8717,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004399,False,0.986
+0.2363,MISMATCH: Description says 'battery_issue' but image shows 'theft',0.75,CLM-004055,True,0.986
+0.863,Description type 'theft' matches image damage type,0.8,CLM-004795,False,0.986
+0.3263,MISMATCH: Description says 'accidental_damage' but image shows 'water_damage',0.75,CLM-003300,True,0.986
+0.7753,Description type 'software_issue' matches image damage type,0.8,CLM-000712,False,0.986
+0.8527,Description type 'software_issue' matches image damage type,0.8,CLM-004546,False,0.986
+0.8092,Description type 'software_issue' matches image damage type,0.8,CLM-000764,False,0.986
+0.8555,Description type 'battery_issue' matches image damage type,0.8,CLM-000790,False,0.986
+0.7235,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005703,False,0.986
+0.1969,MISMATCH: Description says 'mechanical_failure' but image shows 'screen_damage',0.75,CLM-006341,True,0.986
+0.8206,Description type 'screen_damage' matches image damage type,0.8,CLM-004840,False,0.986
+0.8958,Description type 'software_issue' matches image damage type,0.8,CLM-003170,False,0.986
+0.2386,MISMATCH: Description says 'software_issue' but image shows 'screen_damage',0.75,CLM-000394,True,0.986
+0.7553,Description type 'software_issue' matches image damage type,0.8,CLM-001489,False,0.986
+0.7546,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000320,False,0.986
+0.7045,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000626,False,0.986
+0.2913,MISMATCH: Description says 'software_issue' but image shows 'screen_damage',0.75,CLM-002454,True,0.986
+0.7081,Description type 'software_issue' matches image damage type,0.8,CLM-001860,False,0.986
+0.8372,Description type 'theft' matches image damage type,0.8,CLM-006116,False,0.986
+0.8095,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000743,False,0.986
+0.7242,Description type 'battery_issue' matches image damage type,0.8,CLM-001942,False,0.986
+0.8653,Description type 'screen_damage' matches image damage type,0.8,CLM-004105,False,0.986
+0.715,Description type 'theft' matches image damage type,0.8,CLM-001453,False,0.986
+0.7435,Description type 'battery_issue' matches image damage type,0.8,CLM-005150,False,0.986
+0.2883,MISMATCH: Description says 'screen_damage' but image shows 'water_damage',0.75,CLM-007075,True,0.986
+0.8663,Description type 'water_damage' matches image damage type,0.8,CLM-003258,False,0.986
+0.803,Description type 'battery_issue' matches image damage type,0.8,CLM-000170,False,0.986
+0.933,Description type 'theft' matches image damage type,0.8,CLM-005247,False,0.986
+0.8333,Description type 'software_issue' matches image damage type,0.8,CLM-001452,False,0.986
+0.2337,MISMATCH: Description says 'software_issue' but image shows 'mechanical_failure',0.75,CLM-002572,True,0.986
+0.2824,MISMATCH: Description says 'water_damage' but image shows 'screen_damage',0.75,CLM-002198,True,0.986
+0.8171,Description type 'software_issue' matches image damage type,0.8,CLM-001039,False,0.986
+0.8121,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004169,False,0.986
+0.8619,Description type 'theft' matches image damage type,0.8,CLM-005600,False,0.986
+0.785,Description type 'mechanical_failure' matches image damage type,0.8,CLM-007009,False,0.986
+0.7982,Description type 'software_issue' matches image damage type,0.8,CLM-001264,False,0.986
+0.7841,Description type 'water_damage' matches image damage type,0.8,CLM-001164,False,0.986
+0.2025,MISMATCH: Description says 'battery_issue' but image shows 'theft',0.75,CLM-001023,True,0.986
+0.9483,Description type 'accidental_damage' matches image damage type,0.8,CLM-006621,False,0.986
+0.7145,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002727,False,0.986
+0.8661,Description type 'software_issue' matches image damage type,0.8,CLM-001684,False,0.986
+0.8485,Description type 'software_issue' matches image damage type,0.8,CLM-005577,False,0.986
+0.9405,Description type 'software_issue' matches image damage type,0.8,CLM-000180,False,0.986
+0.8949,Description type 'battery_issue' matches image damage type,0.8,CLM-004751,False,0.986
+0.3266,MISMATCH: Description says 'mechanical_failure' but image shows 'water_damage',0.75,CLM-001920,True,0.986
+0.919,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004141,False,0.986
+0.8376,Description type 'accidental_damage' matches image damage type,0.8,CLM-002352,False,0.986
+0.2203,MISMATCH: Description says 'water_damage' but image shows 'mechanical_failure',0.75,CLM-005928,True,0.986
+0.7014,Description type 'software_issue' matches image damage type,0.8,CLM-002419,False,0.986
+0.7389,Description type 'battery_issue' matches image damage type,0.8,CLM-004849,False,0.986
+0.2367,MISMATCH: Description says 'battery_issue' but image shows 'mechanical_failure',0.75,CLM-000032,True,0.986
+0.8017,Description type 'accidental_damage' matches image damage type,0.8,CLM-005203,False,0.986
+0.8299,Description type 'screen_damage' matches image damage type,0.8,CLM-003969,False,0.986
+0.8155,Description type 'accidental_damage' matches image damage type,0.8,CLM-006892,False,0.986
+0.8703,Description type 'software_issue' matches image damage type,0.8,CLM-001651,False,0.986
+0.8123,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000684,False,0.986
+0.7053,Description type 'battery_issue' matches image damage type,0.8,CLM-000169,False,0.986
+0.9148,Description type 'theft' matches image damage type,0.8,CLM-004562,False,0.986
+0.9355,Description type 'water_damage' matches image damage type,0.8,CLM-004891,False,0.986
+0.1534,MISMATCH: Description says 'software_issue' but image shows 'battery_issue',0.75,CLM-006738,True,0.986
+0.3376,MISMATCH: Description says 'theft' but image shows 'accidental_damage',0.75,CLM-001243,True,0.986
+0.7545,Description type 'screen_damage' matches image damage type,0.8,CLM-006108,False,0.986
+0.8843,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002182,False,0.986
+0.7414,Description type 'water_damage' matches image damage type,0.8,CLM-002440,False,0.986
+0.8036,Description type 'software_issue' matches image damage type,0.8,CLM-001193,False,0.986
+0.8054,Description type 'theft' matches image damage type,0.8,CLM-002790,False,0.986
+0.8459,Description type 'water_damage' matches image damage type,0.8,CLM-003287,False,0.986
+0.8974,Description type 'theft' matches image damage type,0.8,CLM-004903,False,0.986
+0.9009,Description type 'battery_issue' matches image damage type,0.8,CLM-004079,False,0.986
+0.7342,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003735,False,0.986
+0.9126,Description type 'accidental_damage' matches image damage type,0.8,CLM-003498,False,0.986
+0.945,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001116,False,0.986
+0.8599,Description type 'screen_damage' matches image damage type,0.8,CLM-004942,False,0.986
+0.7095,Description type 'water_damage' matches image damage type,0.8,CLM-003652,False,0.986
+0.746,Description type 'water_damage' matches image damage type,0.8,CLM-006793,False,0.986
+0.8993,Description type 'accidental_damage' matches image damage type,0.8,CLM-002155,False,0.986
+0.8339,Description type 'battery_issue' matches image damage type,0.8,CLM-002909,False,0.986
+0.7359,Description type 'screen_damage' matches image damage type,0.8,CLM-005621,False,0.986
+0.7606,Description type 'screen_damage' matches image damage type,0.8,CLM-006422,False,0.986
+0.9484,Description type 'screen_damage' matches image damage type,0.8,CLM-006870,False,0.986
+0.9337,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002485,False,0.986
+0.9241,Description type 'battery_issue' matches image damage type,0.8,CLM-004944,False,0.986
+0.7985,Description type 'theft' matches image damage type,0.8,CLM-005947,False,0.986
+0.774,Description type 'water_damage' matches image damage type,0.8,CLM-004991,False,0.986
+0.7466,Description type 'screen_damage' matches image damage type,0.8,CLM-006432,False,0.986
+0.8019,Description type 'screen_damage' matches image damage type,0.8,CLM-002927,False,0.986
+0.1729,MISMATCH: Description says 'screen_damage' but image shows 'water_damage',0.75,CLM-000438,True,0.986
+0.7915,Description type 'software_issue' matches image damage type,0.8,CLM-001877,False,0.986
+0.8572,Description type 'accidental_damage' matches image damage type,0.8,CLM-005177,False,0.986
+0.1272,MISMATCH: Description says 'theft' but image shows 'battery_issue',0.75,CLM-002996,True,0.986
+0.135,MISMATCH: Description says 'software_issue' but image shows 'battery_issue',0.75,CLM-001376,True,0.986
+0.1698,MISMATCH: Description says 'battery_issue' but image shows 'theft',0.75,CLM-006357,True,0.986
+0.8357,Description type 'screen_damage' matches image damage type,0.8,CLM-000586,False,0.986
+0.3281,MISMATCH: Description says 'mechanical_failure' but image shows 'accidental_damage',0.75,CLM-001663,True,0.986
+0.919,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006179,False,0.986
+0.3424,MISMATCH: Description says 'software_issue' but image shows 'screen_damage',0.75,CLM-003837,True,0.986
+0.7004,Description type 'software_issue' matches image damage type,0.8,CLM-006078,False,0.986
+0.7708,Description type 'accidental_damage' matches image damage type,0.8,CLM-002719,False,0.986
+0.9147,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005246,False,0.986
+0.9065,Description type 'battery_issue' matches image damage type,0.8,CLM-002729,False,0.986
+0.8623,Description type 'theft' matches image damage type,0.8,CLM-006497,False,0.986
+0.8604,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003438,False,0.986
+0.8643,Description type 'screen_damage' matches image damage type,0.8,CLM-001653,False,0.986
+0.7824,Description type 'screen_damage' matches image damage type,0.8,CLM-005824,False,0.986
+0.1282,MISMATCH: Description says 'battery_issue' but image shows 'software_issue',0.75,CLM-001946,True,0.986
+0.9422,Description type 'water_damage' matches image damage type,0.8,CLM-000081,False,0.986
+0.8787,Description type 'software_issue' matches image damage type,0.8,CLM-005292,False,0.986
+0.8111,Description type 'water_damage' matches image damage type,0.8,CLM-005161,False,0.986
+0.1711,MISMATCH: Description says 'water_damage' but image shows 'accidental_damage',0.75,CLM-005056,True,0.986
+0.844,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002551,False,0.986
+0.7781,Description type 'mechanical_failure' matches image damage type,0.8,CLM-000096,False,0.986
+0.7834,Description type 'software_issue' matches image damage type,0.8,CLM-002019,False,0.986
+0.8862,Description type 'theft' matches image damage type,0.8,CLM-005977,False,0.986
+0.7033,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003584,False,0.986
+0.9366,Description type 'software_issue' matches image damage type,0.8,CLM-005919,False,0.986
+0.251,MISMATCH: Description says 'mechanical_failure' but image shows 'screen_damage',0.75,CLM-004487,True,0.986
+0.9153,Description type 'theft' matches image damage type,0.8,CLM-001500,False,0.986
+0.9147,Description type 'water_damage' matches image damage type,0.8,CLM-002670,False,0.986
+0.7298,Description type 'software_issue' matches image damage type,0.8,CLM-004300,False,0.986
+0.3124,MISMATCH: Description says 'accidental_damage' but image shows 'software_issue',0.75,CLM-002532,True,0.986
+0.3064,MISMATCH: Description says 'water_damage' but image shows 'software_issue',0.75,CLM-004119,True,0.986
+0.7222,Description type 'theft' matches image damage type,0.8,CLM-002604,False,0.986
+0.9372,Description type 'theft' matches image damage type,0.8,CLM-001182,False,0.986
+0.9181,Description type 'battery_issue' matches image damage type,0.8,CLM-005373,False,0.986
+0.8917,Description type 'water_damage' matches image damage type,0.8,CLM-003774,False,0.986
+0.9327,Description type 'theft' matches image damage type,0.8,CLM-006029,False,0.986
+0.7469,Description type 'theft' matches image damage type,0.8,CLM-006817,False,0.986
+0.4512,Partial match: 'accidental_damage' somewhat related to 'screen_damage',0.6,CLM-007057,True,0.986
+0.9416,Description type 'theft' matches image damage type,0.8,CLM-002167,False,0.986
+0.806,Description type 'screen_damage' matches image damage type,0.8,CLM-001913,False,0.986
+0.7165,Description type 'water_damage' matches image damage type,0.8,CLM-004405,False,0.986
+0.7176,Description type 'software_issue' matches image damage type,0.8,CLM-000713,False,0.986
+0.7945,Description type 'screen_damage' matches image damage type,0.8,CLM-003019,False,0.986
+0.7173,Description type 'water_damage' matches image damage type,0.8,CLM-005592,False,0.986
+0.8944,Description type 'mechanical_failure' matches image damage type,0.8,CLM-004173,False,0.986
+0.7684,Description type 'screen_damage' matches image damage type,0.8,CLM-002185,False,0.986
+0.1511,MISMATCH: Description says 'theft' but image shows 'screen_damage',0.75,CLM-005551,True,0.986
+0.81,Description type 'battery_issue' matches image damage type,0.8,CLM-004428,False,0.986
+0.7302,Description type 'theft' matches image damage type,0.8,CLM-003766,False,0.986
+0.1195,MISMATCH: Description says 'screen_damage' but image shows 'software_issue',0.75,CLM-003483,True,0.986
+0.9215,Description type 'water_damage' matches image damage type,0.8,CLM-004267,False,0.986
+0.7807,Description type 'software_issue' matches image damage type,0.8,CLM-002782,False,0.986
+0.8753,Description type 'software_issue' matches image damage type,0.8,CLM-000512,False,0.986
+0.89,Description type 'screen_damage' matches image damage type,0.8,CLM-002165,False,0.986
+0.8779,Description type 'mechanical_failure' matches image damage type,0.8,CLM-002535,False,0.986
+0.9329,Description type 'battery_issue' matches image damage type,0.8,CLM-004190,False,0.986
+0.7718,Description type 'mechanical_failure' matches image damage type,0.8,CLM-001704,False,0.986
+0.8015,Description type 'mechanical_failure' matches image damage type,0.8,CLM-006722,False,0.986
+0.7501,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003732,False,0.986
+0.9029,Description type 'mechanical_failure' matches image damage type,0.8,CLM-005786,False,0.986
+0.9214,Description type 'software_issue' matches image damage type,0.8,CLM-006835,False,0.986
+0.7173,Description type 'theft' matches image damage type,0.8,CLM-002349,False,0.986
+0.7432,Description type 'water_damage' matches image damage type,0.8,CLM-004191,False,0.986
+0.9378,Description type 'theft' matches image damage type,0.8,CLM-001021,False,0.986
+0.8022,Description type 'accidental_damage' matches image damage type,0.8,CLM-003564,False,0.986
+0.5234,Partial match: 'screen_damage' somewhat related to 'accidental_damage',0.6,CLM-004835,True,0.986
+0.7924,Description type 'theft' matches image damage type,0.8,CLM-001833,False,0.986
+0.8255,Description type 'water_damage' matches image damage type,0.8,CLM-004901,False,0.986
+0.7502,Description type 'screen_damage' matches image damage type,0.8,CLM-001076,False,0.986
+0.9001,Description type 'battery_issue' matches image damage type,0.8,CLM-004933,False,0.986
+0.8656,Description type 'accidental_damage' matches image damage type,0.8,CLM-001635,False,0.986
+0.7136,Description type 'water_damage' matches image damage type,0.8,CLM-002226,False,0.986
+0.2573,MISMATCH: Description says 'accidental_damage' but image shows 'mechanical_failure',0.75,CLM-004609,True,0.986
+0.7797,Description type 'software_issue' matches image damage type,0.8,CLM-000473,False,0.986
+0.2264,MISMATCH: Description says 'accidental_damage' but image shows 'theft',0.75,CLM-001508,True,0.986
+0.8733,Description type 'software_issue' matches image damage type,0.8,CLM-006011,False,0.986
+0.7008,Description type 'software_issue' matches image damage type,0.8,CLM-001784,False,0.986
+0.8784,Description type 'water_damage' matches image damage type,0.8,CLM-002127,False,0.986
+0.27,MISMATCH: Description says 'water_damage' but image shows 'battery_issue',0.75,CLM-001080,True,0.986
+0.7086,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003493,False,0.986
+0.7456,Description type 'battery_issue' matches image damage type,0.8,CLM-003709,False,0.986
+0.7383,Description type 'water_damage' matches image damage type,0.8,CLM-005286,False,0.986
+0.7883,Description type 'software_issue' matches image damage type,0.8,CLM-001222,False,0.986
+0.4916,Partial match: 'screen_damage' somewhat related to 'accidental_damage',0.6,CLM-002945,True,0.986
+0.7544,Description type 'screen_damage' matches image damage type,0.8,CLM-006650,False,0.986
+0.8213,Description type 'mechanical_failure' matches image damage type,0.8,CLM-003893,False,0.986
+0.8617,Description type 'software_issue' matches image damage type,0.8,CLM-002993,False,0.986
+0.7122,Description type 'theft' matches image damage type,0.8,CLM-003997,False,0.986
+0.8445,Description type 'theft' matches image damage type,0.8,CLM-004358,False,0.986
+0.8793,Description type 'theft' matches image damage type,0.8,CLM-003687,False,0.986

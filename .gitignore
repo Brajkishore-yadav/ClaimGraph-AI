@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables - NEVER commit .env
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data outputs (generated, not tracked)
+data/generated/
+data/images/
+experiments/runs/*.json
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# Database
+*.db
+*.sqlite3
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Coverage
+htmlcov/
+.coverage
+
+# PowerPoint output
+docs/executive_summary.pptx

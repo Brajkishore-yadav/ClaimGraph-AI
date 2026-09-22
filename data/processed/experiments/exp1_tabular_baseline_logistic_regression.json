@@ -1,0 +1,64 @@
+{
+  "experiment_name": "exp1_tabular_baseline",
+  "model_name": "logistic_regression",
+  "feature_set": "Tabular baseline",
+  "n_features": 12,
+  "feature_columns": [
+    "claim_amount",
+    "amount_vs_avg",
+    "claim_frequency",
+    "days_since_policy_start",
+    "coverage_utilization",
+    "device_age_days",
+    "amount_vs_device_price",
+    "premium_amount",
+    "claim_type_encoded",
+    "device_type_encoded",
+    "policy_type_encoded",
+    "has_repair_shop"
+  ],
+  "metrics": {
+    "precision": 0.32,
+    "recall": 0.9412,
+    "f1": 0.4776,
+    "roc_auc": 0.9645,
+    "pr_auc": 0.7336,
+    "confusion_matrix": [
+      [
+        988,
+        34
+      ],
+      [
+        1,
+        16
+      ]
+    ],
+    "train_time_seconds": 0.11
+  },
+  "hyperparameters": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": null,
+    "max_iter": 1000,
+    "multi_class": "deprecated",
+    "n_jobs": null,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "data_stats": {
+    "train_size": 4968,
+    "val_size": 1087,
+    "test_size": 1039,
+    "train_fraud_rate": 0.0131,
+    "test_fraud_rate": 0.0164
+  },
+  "model_path": "/Users/brajkishoreyadav/Downloads/AiMl/ClaimGraph-AI/models/exp1_tabular_baseline_logistic_regression.joblib",
+  "timestamp": "2026-09-22 17:59:08.165665"
+}

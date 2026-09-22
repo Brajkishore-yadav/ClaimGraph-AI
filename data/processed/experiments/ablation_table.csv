@@ -1,0 +1,7 @@
+Experiment,Model,Features,N_Features,Precision,Recall,F1,ROC_AUC,PR_AUC
+exp1_tabular_baseline,logistic_regression,Tabular baseline,12,0.32,0.9412,0.4776,0.9645,0.7336
+exp1_tabular_baseline,xgboost,Tabular baseline,12,0.7647,0.7647,0.7647,0.9601,0.8448
+exp2_plus_graph,logistic_regression,+ Graph features,19,0.2857,0.9412,0.4384,0.9654,0.7655
+exp2_plus_graph,xgboost,+ Graph features,19,0.7778,0.8235,0.8,0.9467,0.8673
+exp3_plus_multimodal,logistic_regression,+ Multimodal signal,21,0.2857,0.9412,0.4384,0.9654,0.7666
+exp3_plus_multimodal,xgboost,+ Multimodal signal,21,0.7778,0.8235,0.8,0.9496,0.8684

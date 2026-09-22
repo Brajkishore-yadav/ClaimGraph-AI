@@ -1,0 +1,36 @@
+{
+  "total_issues": 4,
+  "errors": [],
+  "warnings": [
+    {
+      "severity": "WARNING",
+      "entity": "addresses",
+      "field": "full_address",
+      "message": "18 potential duplicate address pairs found",
+      "record_id": ""
+    }
+  ],
+  "info": [
+    {
+      "severity": "INFO",
+      "entity": "claims",
+      "field": "image_path",
+      "message": "7090 missing values in optional field",
+      "record_id": ""
+    },
+    {
+      "severity": "INFO",
+      "entity": "claims",
+      "field": "repair_shop_id",
+      "message": "2850 missing values in optional field",
+      "record_id": ""
+    },
+    {
+      "severity": "INFO",
+      "entity": "claims",
+      "field": "claim_amount",
+      "message": "Amount stats: Q1=139.85, Q3=431.06, IQR=291.22, Bounds=[-296.98, 867.88], Outliers=506 (7.1%)",
+      "record_id": ""
+    }
+  ]
+}
